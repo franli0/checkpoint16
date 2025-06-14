@@ -28,31 +28,31 @@ private:
         // Define wheel speeds for each motion [fl, fr, rl, rr] in rad/sec
         // Based on mecanum wheel kinematics
         
-        // Motion 0: Move forward - all wheels same direction
+        // Motion 1: Move forward - all wheels same direction
         motions_.push_back({1.0, 1.0, 1.0, 1.0});
         motion_names_.push_back("Move forward");
         
-        // Motion 1: Move backward - all wheels opposite direction  
+        // Motion 2: Move backward - all wheels opposite direction  
         motions_.push_back({-1.0, -1.0, -1.0, -1.0});
         motion_names_.push_back("Move backward");
         
-        // Motion 2: Move left - mecanum pattern for left movement
+        // Motion 3: Move left - mecanum pattern for left movement
         motions_.push_back({-1.0, 1.0, 1.0, -1.0});
         motion_names_.push_back("Move left");
         
-        // Motion 3: Move right - mecanum pattern for right movement  
+        // Motion 4: Move right - mecanum pattern for right movement  
         motions_.push_back({1.0, -1.0, -1.0, 1.0});
         motion_names_.push_back("Move right");
         
-        // Motion 4: Turn clockwise - left wheels forward, right wheels backward
-        motions_.push_back({-1.0, 1.0, -1.0, 1.0});
+        // Motion 5: Turn clockwise - left wheels forward, right wheels backward
+        motions_.push_back({1.0, -1.0, 1.0, -1.0});
         motion_names_.push_back("Turn clockwise");
         
-        // Motion 5: Turn counter-clockwise - left wheels backward, right wheels forward
-        motions_.push_back({1.0, -1.0, 1.0, -1.0});
+        // Motion 6: Turn counter-clockwise - left wheels backward, right wheels forward
+        motions_.push_back({-1.0, 1.0, -1.0, 1.0});
         motion_names_.push_back("Turn counter-clockwise");
         
-        // Motion 6: Stop
+        // Motion 7: Stop
         motions_.push_back({0.0, 0.0, 0.0, 0.0});
         motion_names_.push_back("Stop");
     }
